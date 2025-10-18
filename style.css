@@ -1,0 +1,221 @@
+/* ===== عام للجسم والهيدر ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #000; /* كل النصوص باللون الأسود افتراضياً */
+}
+
+header {
+  background: #2E8B57;
+  color: #fff;
+  padding: 18px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header h2 {
+  margin: 6px 0 0;
+  font-weight: 400;
+}
+
+/* ===== النجوم ===== */
+.star-board {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
+.star-board span {
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  color: #000; /* نجوم باللون الأسود قبل الاختيار */
+}
+
+/* ===== التنقل (الراوند) ===== */
+nav {
+  display: flex !important;           /* عرض مرن */
+  flex-direction: column !important;  /* عمودي */
+  align-items: center;                 /* توسيط الأزرار أفقياً */
+  gap: 12px;                           /* مسافة بين الأزرار */
+  padding: 12px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+nav button {
+  display: block !important;
+  width: 200px !important;            /* عرض ثابت لكل زر */
+  padding: 14px;
+  border-radius: 8px;
+  background: #fff;
+  border: 2px solid #2E8B57;
+  cursor: pointer;
+  font-size: 15px;
+  color: #000; /* نص أسود */
+}
+
+/* ===== الحاوية ===== */
+.container {
+  padding: 18px;
+}
+
+/* ===== الأقسام ===== */
+.content {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* ===== القاموس ===== */
+#dictFilter {
+  padding: 10px;
+  width: 100%;
+  max-width: 520px;
+  color: #000; /* النص الأسود */
+}
+
+#dictList {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  max-height: 360px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #000; /* كل الكلمات باللون الأسود */
+}
+
+#dictList li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  background: #fff; /* خلفية بيضاء */
+  color: #000; /* نص أسود */
+}
+
+#dictList li:hover {
+  background: #f0f0f0; /* تأثير hover */
+}
+
+/* ===== Flashcards ===== */
+.flashcard-box {
+  font-size: 22px;
+  text-align: center;
+  padding: 18px;
+  margin: 10px auto;
+  border-radius: 8px;
+  background: #fff;
+  max-width: 700px;
+  border: 1px solid #ddd;
+  display: none;
+  color: #000; /* نص أسود */
+}
+
+#flashTimer {
+  text-align: center;
+  margin-top: 6px;
+  font-weight: 600;
+  color: #000; /* نص أسود */
+}
+
+.input-box {
+  text-align: center;
+  margin-top: 12px;
+  display: none;
+}
+
+.input-box input {
+  padding: 10px;
+  font-size: 16px;
+  width: 70%;
+  max-width: 420px;
+  color: #000; /* نص أسود */
+}
+
+.input-box button {
+  padding: 10px 14px;
+  margin-left: 8px;
+  font-size: 15px;
+  color: #000; /* نص أسود */
+}
+
+/* ===== الجداول ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+  background: #fff;
+  color: #000; /* نص أسود */
+}
+
+input.word-input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  color: #000; /* نص أسود */
+}
+
+button.small {
+  padding: 6px 8px;
+  margin-top: 6px;
+  color: #000; /* نص أسود */
+}
+
+.correct {
+  background: #c8e6c9;
+  color: #000; /* نص أسود */
+}
+
+.incorrect {
+  background: #ffcdd2;
+  color: #000; /* نص أسود */
+}
+
+/* ===== Round 3 ===== */
+.round3-words {
+  padding: 10px;
+  color: #000; /* نص أسود */
+}
+
+.round3-words span {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #2E8B57;
+  color: #000; /* نص أسود */
+}
+
+/* ===== Round 4: القصص ===== */
+.story p {
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #e6e6e6;
+  color: #000; /* نص أسود */
+}
+
+/* ===== الفوتر ===== */
+footer {
+  padding: 12px;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+}
