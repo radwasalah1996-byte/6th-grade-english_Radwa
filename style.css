@@ -219,3 +219,37 @@ footer {
   color: #666;
   font-size: 13px;
 }
+/* ===== Round 3 Puzzle Drag & Drop ===== */
+.word-box {
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+.letter-box {
+  transition: 0.3s;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #555;
+  margin-right: 4px;
+  text-align: center;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.letter-card {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #2E8B57;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  cursor: grab;
+  margin: 4px;
+}
+
+.letter-card:hover {
+  background: #e0f2f1;
+}
