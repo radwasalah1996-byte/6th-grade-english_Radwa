@@ -53,6 +53,7 @@ const arabicWords = [  "مسعف",
   "يعبر",
   "يهم/أمر"
 ];
+
 /* ----- إعداد النجوم ----- */
 function initStars(){
   const board = document.getElementById('starBoard');
@@ -215,14 +216,126 @@ function checkRound2(index){
   }
 }
 
-/* ----- Round 3 ----- */
+/* ----- Round 3 Puzzle Drag & Drop (نسخة كاملة) ----- */
+let round3Index = 0; // بداية من الكلمة الأولى
+let round3CurrentSet = [];
+
 function startRound3(){
   const container = document.getElementById('round3Words');
   container.innerHTML = '';
-  const shuffled = words.slice().sort(()=>Math.random()-0.5).slice(0,20);
-  shuffled.forEach(w=>{
-    const sp = document.createElement('span');
-    sp.textContent = w;
-    container.appendChild(sp);
+
+  // نختار 5 كلمات من القائمة
+  round3CurrentSet = words.slice(round3Index, round3Index + 5);
+
+  round3CurrentSet.forEach((word, idx) => {
+    const wordBoxContainer = document.createElement('div');
+    wordBoxContainer.style.marginBottom = '20px';
+
+    // ✅ اسم الكلمة فوق البوكسات
+    const wordLabel = document.createElement('div');
+    wordLabel.textContent = word; 
+    wordLabel.style.fontWeight = 'bold';
+    wordLabel.style.marginBottom = '6px';
+    wordBoxContainer.appendChild(wordLabel);
+
+    const wordBox = document.createElement('div');
+    wordBox.className = 'word-box';
+    wordBox.dataset.word = word.toLowerCase();
+
+    // عمل بوكسات الحروف
+    for(let i=0; i<word.length; i++){
+      const letterBox = document.createElement('span');
+      letterBox.className = 'letter-box';
+      letterBox.dataset.letter = word[i].toLowerCase();
+      letterBox.textContent = '';
+      letterBox.style.display = 'inline-block';
+      letterBox.style.width = '30px';
+      letterBox.style.height = '30px';
+      letterBox.style.border = '1px solid #555';
+      letterBox.style.marginRight = '4px';
+      letterBox.style.textAlign = 'center';
+      letterBox.style.fontSize = '18px';
+      letterBox.style.verticalAlign = 'middle';
+      wordBox.appendChild(letterBox);
+    }
+
+    wordBoxContainer.appendChild(wordBox);
+    container.appendChild(wordBoxContainer);
   });
+
+  // الحروف المبعثرة
+  const letterContainer = document.createElement('div');
+  letterContainer.id = 'letterContainer';
+  letterContainer.style.marginTop = '20px';
+  letterContainer.style.display = 'flex';
+  letterContainer.style.flexWrap = 'wrap';
+  letterContainer.style.gap = '8px';
+
+  let allLetters = [];
+  round3CurrentSet.forEach(w => allLetters.push(...w.split('')));
+  allLetters.sort(()=>Math.random()-0.5);
+
+  allLetters.forEach(l => {
+    const card = document.createElement('div');
+    card.className = 'letter-card';
+    card.textContent = l;
+    card.draggable = true;
+    card.style.width = '30px';
+    card.style.height = '30px';
+    card.style.border = '1px solid #2E8B57';
+    card.style.borderRadius = '6px';
+    card.style.display = 'flex';
+    card.style.alignItems = 'center';
+    card.style.justifyContent = 'center';
+    card.style.background = '#fff';
+    card.style.cursor = 'grab';
+    card.addEventListener('dragstart', dragStart);
+    letterContainer.appendChild(card);
+  });
+
+  container.appendChild(letterContainer);
+
+  document.querySelectorAll('.letter-box').forEach(box=>{
+    box.addEventListener('dragover', dragOver);
+    box.addEventListener('drop', dropLetter);
+  });
+}
+
+/* ----- Drag & Drop Functions ----- */
+let draggedLetter = null;
+
+function dragStart(e){
+  draggedLetter = e.target;
+}
+
+function dragOver(e){
+  e.preventDefault();
+}
+
+function dropLetter(e){
+  if(!draggedLetter) return;
+  e.target.textContent = draggedLetter.textContent;
+  checkWord(e.target.parentElement);
+  draggedLetter.remove();
+  draggedLetter = null;
+}
+
+/* ----- التحقق من الكلمة ----- */
+function checkWord(wordBox){
+  const letters = Array.from(wordBox.querySelectorAll('.letter-box'));
+  const currentWord = letters.map(l=>l.textContent).join('').toLowerCase();
+  if(currentWord === wordBox.dataset.word){
+    wordBox.style.background = '#c8e6c9';
+    letters.forEach(l=> l.style.border='1px solid #2E8B57');
+    const allDone = Array.from(document.querySelectorAll('.word-box'))
+                        .every(box=>box.style.background==='rgb(200, 230, 201)');
+    if(allDone){
+      round3Index += 5;
+      if(round3Index < words.length){
+        setTimeout(()=>startRound3(), 1000);
+      } else {
+        alert('تم الانتهاء من كل الكلمات 🎉');
+      }
+    }
+  }
 }
