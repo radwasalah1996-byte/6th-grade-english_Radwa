@@ -1,5 +1,5 @@
 /* ----- البيانات: قائمة 200 كلمة (English + Arabic) ----- */
-const words = [  "paramedic",
+const words =  [  "paramedic",
   "architect",
   "water resources engineer",
   "mechanic",
@@ -25,6 +25,17 @@ const words = [  "paramedic",
   "save",
   "cross",
   "matter"
+ "information",
+  "scary",
+  "situation",
+  "list",
+  "packages",
+  "conversation",
+  "uniform",
+  "travel",
+  "traveled",
+  "happened",
+  "stopped"
 ];
 const arabicWords = [  "مسعف",
   "مهندس معماري",
@@ -52,6 +63,17 @@ const arabicWords = [  "مسعف",
   "ينقذ/يوفر",
   "يعبر",
   "يهم/أمر"
+"معلومات",
+  "مخيف",
+  "موقف (حالة)",
+  "قائمة",
+  "طرود (بريدية)",
+  "محادثة",
+  "زي موحد",
+  "يسافر",
+  "سافر",
+  "حدث",
+  "توقف"
 ];
 
 /* ----- إعداد النجوم ----- */
