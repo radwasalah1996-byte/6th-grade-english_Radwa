@@ -1,7 +1,58 @@
 /* ----- البيانات: قائمة 200 كلمة (English + Arabic) ----- */
-const words = ["Student","Teacher","Classroom","Library","Homework","Notebook","Pencil","Desk","Chair","Project","Computer","Science","Experiment","Breakfast","Lunch","Dinner","Water","Fruit","Vegetable","Clothes","Shoes","Bag","House","Kitchen","Football","Basketball","Tennis","Swimming","Music","Dance","Reading","Painting","Running","Gym","Tree","Flower","River","Mountain","Sun","Moon","Star","Rain","Snow","Cloud","Cat","Dog","Bird","Fish","Elephant","Lion","Monkey","Horse","Rabbit","Camel","Red","Blue","Green","Yellow","Black","White","Circle","Square","Triangle","Rectangle","Market","Shop","Doctor","Hospital","Garden","Airport","Station","Clock","Window","Door","Road","Map","Museum","History","Culture","Language","Citizen","Celebration","Festival","Research","Discovery","Creativity","Connect","Unit","Life","Digital","Planning","Environment","Community","Resource","Ancient","Civilization","Energy","Heritage","Artifact","Pyramid","Pharaoh","Mummy","Society","Government","Schoolbag","Schedule","Timetable","Lesson","Sentence","Paragraph","Story","Chapter","Answer","Question","Quiz","Exam","Practice","Skill","Exercise","Revision","Review","Grammar","Vocabulary","Pronunciation","Conversation","Dialogue","Opinion","Argument","Compare","Contrast","Describe","Explain","Suggest","Recommend","Prepare","Perform","Observe","Measure","Calculate","Solve","Estimate","Predict","Conclude","Summarize","Interpret","Analyze","Healthy","Nutrition","Exercise","Hygiene","Nurse","Patient","Clinic","Medicine","Treatment","Planet","Earth","Ocean","Forest","Desert","Climate","Weather","Temperature","Season","Spring","Summer","Autumn","Winter","Pollution","Recycle","Reduce","Reuse","Protect","Conserve","Sustainability","Transport","Car","Bus","Train","Bicycle","Motorcycle","Traffic","Safety","Seatbelt","Tourism","Travel","Guide","Tourist","Reservation","Hotel","Restaurant","Menu","Order","Taste","Delicious","Recipe","Cook","Bake","Slice","Serve","Ingredient","Maple","Harbor","Bridge","Statue","Temple","Palace","Fort","Trade","Marketplace","Currency","Employer","Employee","Factory","Product","Industry","Service","Agriculture","Farmer","Harvest","Irrigation","Volunteer","Charity","Neighbor","Communitycenter","Festivalground","Lecture","Presentation","Report","Survey","Interview","Technology","Internet","Website","Application","Program","Device","Download","Upload","Signal","Battery"];
-const arabicWords = ["طالب","معلم","فصل","مكتبة","واجب","دفتر","قلم","مكتب","كرسي","مشروع","كمبيوتر","علوم","تجربة","إفطار","غداء","عشاء","ماء","فاكهة","خضار","ملابس","أحذية","حقيبة","منزل","مطبخ","كرة قدم","كرة سلة","تنس","سباحة","موسيقى","رقص","قراءة","رسم","ركض","صالة رياضية","شجرة","زهرة","نهر","جبل","شمس","قمر","نجمة","مطر","ثلج","سحاب","قط","كلب","طائر","سمك","فيل","أسد","قرد","حصان","أرنب","جمل","أحمر","أزرق","أخضر","أصفر","أسود","أبيض","دائرة","مربع","مثلث","مستطيل","سوق","متجر","طبيب","مستشفى","حديقة","مطار","محطة","ساعة","نافذة","باب","طريق","خريطة","متحف","تاريخ","ثقافة","لغة","مواطن","احتفال","مهرجان","بحث","اكتشاف","إبداع","اتصال","وحدة","حياة","رقمي","تخطيط","بيئة","مجتمع","موارد","قديم","حضارة","طاقة","تراث","أثر","هرم","فرعون","مومياء","مجتمع","حكومة","حقيبة مدرسية","جدول","حصة","درس","جملة","فقرة","قصة","فصل","إجابة","سؤال","اختبار","امتحان","تمرين","مهارة","ممارسة","مراجعة","مراجعة","قواعد","مفردات","نطق","محادثة","حوار","رأي","حجة","قارن","قارن","وصف","شرح","اقترح","أوصي","حضّر","نفّذ","راقب","قِس","احسب","حل","قدّر","توقع","استنتج","لخّص","فسر","حلل","صحي","تغذية","تمرين","نظافة","ممرض","مريض","عيادة","دواء","علاج","كوكب","أرض","محيط","غابة","صحراء","مناخ","طقس","درجة حرارة","موسم","ربيع","صيف","خريف","شتاء","تلوث","إعادة تدوير","تقليل","إعادة استخدام","حماية","حفظ","استدامة","نقل","سيارة","حافلة","قطار","دراجة","دراجة نارية","مرور","سلامة","حزام أمان","سياحة","سفر","دليل","سائح","حجز","فندق","مطعم","قائمة","طلب","طعم","لذيذ","وصفة","طبخ","خبز","شريحة","تقديم","مكون","قيقم","ميناء","جسر","تمثال","معبد","قصر","حصن","تجارة","سوق","عملة","صاحب العمل","موظف","مصنع","منتج","صناعة","خدمة","زراعة","مزارع","حصاد","ري","متطوع","جمعية خيرية","جار","مركز مجتمع","أرض مهرجان","محاضرة","عرض تقديمي","تقرير","استبيان","مقابلة","تكنولوجيا","إنترنت","موقع ويب","تطبيق","برنامج","جهاز","تحميل","رفع","إشارة","بطارية"];
-
+const words = [  "paramedic",
+  "architect",
+  "water resources engineer",
+  "mechanic",
+  "tailor",
+  "delivery person",
+  "street cleaner",
+  "traffic officer",
+  "community",
+  "research",
+  "emergency",
+  "brave",
+  "vehicles",
+  "control",
+  "afraid",
+  "difficult",
+  "success",
+  "quick",
+  "life",
+  "happen",
+  "stop",
+  "need",
+  "fix",
+  "save",
+  "cross",
+  "matter"
+];
+const arabicWords = [  "مسعف",
+  "مهندس معماري",
+  "مهندس موارد مائية",
+  "ميكانيكي",
+  "ترزي (خياط ملابس)",
+  "عامل توصيل طلبات",
+  "عامل نظافة الشارع",
+  "ضابط مرور",
+  "مجتمع",
+  "بحث علمي",
+  "طوارئ",
+  "شجاع",
+  "مركبات",
+  "تحكم",
+  "خائف",
+  "صعب",
+  "نجاح",
+  "سريع",
+  "حياة",
+  "يحدث",
+  "يتوقف",
+  "يحتاج",
+  "يصلح",
+  "ينقذ/يوفر",
+  "يعبر",
+  "يهم/أمر"
+];
 /* ----- إعداد النجوم ----- */
 function initStars(){
   const board = document.getElementById('starBoard');
